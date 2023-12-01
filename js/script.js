@@ -8,27 +8,9 @@
 
 // creo un container
 const container = document.querySelector(".container");
-const card = document.querySelector(".teamcard");
-
-// // creo il div
-// const card = document.createElement("div");
-// creo sezione img
-const imgTag = document.createElement("img");
-// creo sezione h1
-const h1Tag = document.createElement("h1");
-// creo sezione p
-const pTag = document.createElement("p");
-
-// creo una classe al div
-// card.classList.add("teamcard");
-
-// assegno il div al container
-// container.append(card);
-
-card.append(imgTag);
-card.append(h1Tag);
-card.append(pTag);
-
+const imgTeam = document.querySelector(".imgteam");
+const nomeTeam = document.querySelector(".nometeam");
+const ruoloTeam = document.querySelector(".ruoloteam");
 
 //  Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
 // const teamMember = {
@@ -88,10 +70,18 @@ for(i= 0; i<arrayTeamMember.length; i++){
     
     let teamMemberIesimo = arrayTeamMember[i];
     console.log(teamMemberIesimo);
+
+
+    imgTeam.append(arrayTeamMember.img);
+    nomeTeam.append(arrayTeamMember.name);
+
+
 }
 
-imgTag.append(arrayTeamMember.img);
-h1Tag.append(arrayTeamMember.name);
+
+
+
+
 
 
    
