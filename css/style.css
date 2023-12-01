@@ -1,0 +1,23 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+
+}
+#testo{
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.container{
+    max-width: 100%;
+    padding: 80px 300px;
+    text-align: center;
+
+}
