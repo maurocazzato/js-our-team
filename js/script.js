@@ -19,15 +19,13 @@ card.classList.add("teamcard");
 container.append(card);
 
 //  Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
-const teamMember = {
-    "nome": "",
-    "ruolo": "",
-    "foto": "",
-};
+// const teamMember = {
+//     "nome": "",
+//     "ruolo": "",
+//     "foto": "",
+// };
 
-for (let key in teamMember ){
-    console.log(key, teamMember[key]);
-};
+
 
 // creare un array di oggetti per rappresentare i membri del team.
 const arrayTeamMember = [
@@ -67,7 +65,11 @@ const arrayTeamMember = [
         "img": "barbara-ramos-graphic-designer.jpg",
 
     },
+    
 ]
+
+
+
 
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 for(i= 0; i<arrayTeamMember.length; i++){
@@ -75,9 +77,8 @@ for(i= 0; i<arrayTeamMember.length; i++){
     let teamMemberIesimo = arrayTeamMember[i];
     console.log(teamMemberIesimo);
 }
-    // assegno al div i membri del team
 
-    card.append(teamMemberIesimo);
+
    
 
 
