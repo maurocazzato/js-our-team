@@ -6,6 +6,18 @@
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sotto forma di stringhe
 
+// creo un container
+const container = document.querySelector(".container");
+
+// creo il div
+const card = document.createElement("div");
+
+// creo una classe al div
+card.classList.add("teamcard");
+
+// assegno il div al container
+container.append(card);
+
 //  Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
 const teamMember = {
     "nome": "",
@@ -63,3 +75,10 @@ for(i= 0; i<arrayTeamMember.length; i++){
     let teamMemberIesimo = arrayTeamMember[i];
     console.log(teamMemberIesimo);
 }
+    // assegno al div i membri del team
+
+    card.append(teamMemberIesimo);
+   
+
+
+   
