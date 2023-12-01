@@ -72,8 +72,10 @@ for(i= 0; i<arrayTeamMember.length; i++){
     console.log(teamMemberIesimo);
 
 
-    imgTeam.append(arrayTeamMember.img);
-    nomeTeam.append(arrayTeamMember.name);
+    // imgTeam.append(teamMemberIesimo.img);
+    nomeTeam.append(teamMemberIesimo.nome);
+    ruoloTeam.append(teamMemberIesimo.ruolo);
+
 
 
 }
