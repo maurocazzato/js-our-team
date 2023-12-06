@@ -6,11 +6,7 @@
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sotto forma di stringhe
 
-// creo un container
-const container = document.querySelector(".container");
-const imgTeam = document.querySelector(".imgteam");
-const nomeTeam = document.querySelector(".nometeam");
-const ruoloTeam = document.querySelector(".ruoloteam");
+
 
 //  Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
 // const teamMember = {
@@ -22,63 +18,67 @@ const ruoloTeam = document.querySelector(".ruoloteam");
 
 
 // creare un array di oggetti per rappresentare i membri del team.
-const arrayTeamMember = [
+const member = [
     {
         "nome": "Wayne Barnett",
         "ruolo": "Founder & CEO",
-        "img": "wayne-barnett-founder-ceo.jpg",
+        "img": "/Users/maurocazzato/Desktop/CORSO WEB/js-our-team/img/wayne-barnett-founder-ceo.jpg",
 
     },
     {
         "nome": "Angela Caroll",
         "ruolo": "Chief Editor",
-        "img": "angela-caroll-chief-editor.jpg",
+        "img": "/Users/maurocazzato/Desktop/CORSO WEB/js-our-team/img/angela-caroll-chief-editor.jpg",
 
     },
     {
         "nome": "Walter Gordon",
         "ruolo": "Office Manager",
-        "img": "walter-gordon-office-manager.jpg",
+        "img": "/Users/maurocazzato/Desktop/CORSO WEB/js-our-team/img/walter-gordon-office-manager.jpg",
 
     },
     {
         "nome": "Angela Lopez",
         "ruolo": "Social Media Manager",
-        "img": "angela-lopez-social-media-manager.jpg",
+        "img": "/Users/maurocazzato/Desktop/CORSO WEB/js-our-team/img/angela-lopez-social-media-manager.jpg",
 
     },
     {
         "nome": "Scott Estrada",
         "ruolo": "Developer",
-        "img": "scott-estrada-developer.jpg",
+        "img": "/Users/maurocazzato/Desktop/CORSO WEB/js-our-team/img/scott-estrada-developer.jpg",
 
     },
     {
         "nome": "Barbara Ramos",
         "ruolo": "Graphic Designer",
-        "img": "barbara-ramos-graphic-designer.jpg",
+        "img": "/Users/maurocazzato/Desktop/CORSO WEB/js-our-team/img/barbara-ramos-graphic-designer.jpg",
 
     },
     
-]
+];
 
+// contenitore dove aggiungere il div
+const container = document.getElementById('container');
 
-
-
-// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-for(i= 0; i<arrayTeamMember.length; i++){
-    
-    let teamMemberIesimo = arrayTeamMember[i];
-    console.log(teamMemberIesimo);
-
-
-    // imgTeam.append(teamMemberIesimo.img);
-    nomeTeam.append(teamMemberIesimo.nome);
-    ruoloTeam.append(teamMemberIesimo.ruolo);
-
-
-
+// funzione per creare la card
+function generateMemberCard(member) {
+    return `
+        <div class="card">
+            <img class="cardimg" src="${member.img}" alt="${member.nome}">
+            <h2>${member.nome}</h2>
+            <p>${member.ruolo}</p>
+        </div>
+    `;
 }
+
+// aggiungo i div al container
+member.forEach(member => {
+    container.innerHTML += generateMemberCard(member);
+});
+
+
+
 
 
 
